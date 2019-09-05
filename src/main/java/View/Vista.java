@@ -5,6 +5,7 @@
  */
 package View;
 
+import Model.*;
 /**
  *
  * @author derec
@@ -74,6 +75,13 @@ public class Vista extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Vista().setVisible(true);
+     
+                Combo comb = new Combo.ComboBuilder()
+                        .addPlato("P-1","Plato 1",3000)
+                        .addBebida("B-1", "Bebida 1", 1000)
+                        .addAdicional("A-1", "Adicional 1", 500)
+                        .build();
+                //System.out.println("Combos:",comb);
             }
         });
     }
